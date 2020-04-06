@@ -29,10 +29,9 @@ public class MainActivity extends AppCompatActivity implements AddContactDialog.
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
                 AddContactDialog addContactDialog = AddContactDialog.newInstance();
                 addContactDialog.setCancelable(false);
-                addContactDialog.show(fragmentTransaction, "dialog");
+                addContactDialog.show(getSupportFragmentManager(), "dialog");
             }
         });
     }
